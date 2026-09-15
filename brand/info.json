@@ -1,0 +1,106 @@
+{
+ "bird-arc": {
+  "bytes": 19696,
+  "height": 752,
+  "out": "public/brand/arc.webp",
+  "width": 1344
+ },
+ "bird-avatar": {
+  "bytes": 63420,
+  "height": 900,
+  "out": "src/assets/brand/bird-avatar.webp",
+  "width": 900
+ },
+ "bird-avatar-touch": {
+  "bytes": 53988,
+  "height": 180,
+  "out": "public/apple-touch-icon.png",
+  "width": 180
+ },
+ "bird-banner": {
+  "bytes": 24702,
+  "height": 752,
+  "out": "public/brand/banner.webp",
+  "width": 1344
+ },
+ "bird-flight": {
+  "bytes": 63084,
+  "height": 752,
+  "out": "public/brand/flight.webp",
+  "width": 1344
+ },
+ "bird-hero": {
+  "bytes": 62820,
+  "height": 752,
+  "out": "public/brand/hero.webp",
+  "width": 1344
+ },
+ "bird-hero-sm": {
+  "bytes": 21634,
+  "height": 403,
+  "out": "public/brand/hero-720.webp",
+  "width": 720
+ },
+ "bird-light": {
+  "bytes": 49480,
+  "height": 900,
+  "out": "src/assets/brand/bird-light.webp",
+  "width": 900
+ },
+ "bird-mark": {
+  "bytes": 6464,
+  "height": 512,
+  "out": "src/assets/brand/bird-mark.webp",
+  "width": 512
+ },
+ "bird-ref": {
+  "bytes": 38496,
+  "height": 1024,
+  "out": "src/assets/brand/bird.webp",
+  "width": 1024
+ },
+ "bird-shatter": {
+  "bytes": 122092,
+  "height": 752,
+  "out": "public/brand/shatter.webp",
+  "width": 1344
+ },
+ "endcard-ref": {
+  "bytes": 37212,
+  "height": 752,
+  "out": "src/assets/brand/endcard-ref.webp",
+  "width": 1344
+ },
+ "film-a": {
+  "bytes": 1805012,
+  "duration": 12.625326,
+  "height": 722,
+  "out": "public/brand/film-a-1280.mp4",
+  "width": 1276
+ },
+ "film-a-720": {
+  "bytes": 595999,
+  "duration": 12.625326,
+  "height": 722,
+  "out": "public/brand/film-a-720.mp4",
+  "width": 1276
+ },
+ "h-chrome": {
+  "bytes": 37024,
+  "height": 509,
+  "out": "src/assets/brand/h-chrome.webp",
+  "width": 900
+ },
+ "og": {
+  "bytes": 962460,
+  "height": 630,
+  "out": "public/og.png",
+  "width": 1200
+ },
+ "shatter-ref": {
+  "bytes": 44112,
+  "height": 722,
+  "out": "src/assets/brand/shatter-ref.webp",
+  "width": 1276
+ }
+}
