@@ -1,6 +1,6 @@
 # Halevora & Co Website: Design Summary
 
-Branch `claude/zealous-dijkstra-pyte1y` · September 2026
+Branch `claude/zealous-dijkstra-pyte1y` · September 2026 · Preview: https://claude.ai/artifact/WJvqqgJf54KMdvfr6k5XMY
 
 ## 1. Positioning
 

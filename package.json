@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && node scripts/prerender.mjs",
-    "build:preview": "VITE_ROUTER=hash vite build --outDir dist-preview",
+    "build:preview": "VITE_ROUTER=memory vite build --base=./ --outDir dist-preview && node scripts/relocate-preview.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },

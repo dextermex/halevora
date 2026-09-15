@@ -1,11 +1,12 @@
 import { lazy, Suspense } from "react";
 import { MotionConfig } from "motion/react";
-import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, MemoryRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./site/ScrollToTop";
 import Home from "./pages/Home";
 
-/** VITE_ROUTER=hash builds a relocatable preview (no server-side routing needed). */
-const Router = import.meta.env.VITE_ROUTER === "hash" ? HashRouter : BrowserRouter;
+/** VITE_ROUTER=hash builds a relocatable preview (no server-side routing needed);
+ * VITE_ROUTER=memory keeps routing in memory so in-page anchors still scroll. */
+const Router = import.meta.env.VITE_ROUTER === "hash" ? HashRouter : import.meta.env.VITE_ROUTER === "memory" ? MemoryRouter : BrowserRouter;
 
 const Apply = lazy(() => import("./pages/Apply"));
 const CaseStudies = lazy(() => import("./pages/CaseStudies"));
