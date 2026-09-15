@@ -1,0 +1,21 @@
+name = "halevora-site"
+main = "worker.js"
+compatibility_date = "2025-06-01"
+
+# Static assets plus a small edge worker (canonical-host redirect, POST /api/intake).
+# The custom domains below are bound on deploy; each zone must live on the
+# deploying Cloudflare account.
+routes = [
+  { pattern = "halevora.com", custom_domain = true },
+  { pattern = "www.halevora.com", custom_domain = true },
+]
+# Secrets for the intake channel:
+#   wrangler secret put INTAKE_BOT_TOKEN   # Telegram bot token
+#   wrangler secret put INTAKE_CHAT_ID     # private chat or channel id
+#   wrangler secret put INTAKE_WEBHOOK_URL # optional JSON webhook instead
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+run_worker_first = true
+# Every route is prerendered to its own HTML file; unknown paths get dist/404.html (noindex).
+not_found_handling = "404-page"

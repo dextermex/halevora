@@ -126,23 +126,6 @@
   "crf": 28
  },
  {
-  "id": "film-b",
-  "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EYoR3nfh8U5VPZYJrr1tA5ichC/a9137a76-4377-439d-89c3-d1d2ecec66b8.mp4",
-  "out": "public/brand/film-b-1280.mp4",
-  "poster": "public/brand/film-b-poster.jpg",
-  "width": 1280,
-  "crf": 26,
-  "frames": 8
- },
- {
-  "id": "film-b-720",
-  "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EYoR3nfh8U5VPZYJrr1tA5ichC/a9137a76-4377-439d-89c3-d1d2ecec66b8.mp4",
-  "preview": false,
-  "out": "public/brand/film-b-720.mp4",
-  "width": 720,
-  "crf": 28
- },
- {
   "id": "h-glass",
   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EYoR3nfh8U5VPZYJrr1tA5ichC/hf_20260915_071223_1a7ee60f-b0e7-46ad-ac8d-ddc85e5e3ff4.png",
   "out": "src/assets/brand/h-glass.webp",
