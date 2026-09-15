@@ -1,0 +1,43 @@
+name: Fetch brand assets
+
+# The development container has no egress to the Higgsfield render CDN, so a
+# GitHub runner downloads the glass-bird renders listed in brand/manifest.json,
+# post-processes them (trim, resize, WebP, MP4 compression, contact sheets) and
+# commits the results back to the branch that triggered the run.
+on:
+  workflow_dispatch:
+  push:
+    branches: ["claude/**"]
+    paths:
+      - "brand/manifest.json"
+      - "scripts/fetch_brand_assets.py"
+      - ".github/workflows/fetch-brand-assets.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-brand-assets-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests pillow
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+      - run: python scripts/fetch_brand_assets.py
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for p in brand src/assets/brand public/brand public/og.png public/apple-touch-icon.png public/favicon.png public/favicon.ico; do [ -e "$p" ] && git add -A "$p"; done
+          git diff --cached --quiet && echo "Nothing to commit" && exit 0
+          git commit -m "Fetch brand assets (automated)"
+          git push origin HEAD:${{ github.ref_name }}
