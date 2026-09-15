@@ -37,7 +37,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          for p in brand src/assets/brand public/brand public/og.png public/apple-touch-icon.png public/favicon.png public/favicon.ico; do [ -e "$p" ] && git add -A "$p"; done
+          for p in brand src/assets/brand public/brand public/og.jpg public/apple-touch-icon.png public/favicon.png public/favicon.ico; do [ -e "$p" ] && git add -A "$p"; done
           git diff --cached --quiet && echo "Nothing to commit" && exit 0
           git commit -m "Fetch brand assets (automated)"
           git push origin HEAD:${{ github.ref_name }}

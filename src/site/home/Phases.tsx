@@ -11,14 +11,11 @@ export default function Phases() {
   return (
     <CausticSweep className="sec" id="ninety">
       <div className="wrap">
-        <div className="split split--r" style={{ marginBottom: 44 }}>
-          <p className="sub reveal" style={{ alignSelf: "end", order: 2 }}>Ninety days is the honest horizon. Anyone promising less is guessing with your page.</p>
-          <div className="sec-head reveal" style={{ marginBottom: 0, order: 1 }}>
-            <span className="eyebrow">How it starts</span>
-            <h2 className="h-sec">The first <em>ninety days.</em></h2>
-          </div>
+        <div className="sec-head reveal">
+          <span className="eyebrow">How it starts</span>
+          <h2 className="h-sec">The first <em>ninety days.</em></h2>
         </div>
-        <div className="diag-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))" }}>
+        <div className="diag-grid phases">
           {PHASES.map((p, i) => (
             <article className="glass glass--hover phase reveal" data-delay={i + 1} key={p.n}>
               <span className="n" aria-hidden="true">{p.n}</span>

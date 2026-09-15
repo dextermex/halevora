@@ -36,7 +36,7 @@ export default function CaseStudies() {
                 <p className="fig-l reveal">{CASE.figureLabel}</p>
                 <blockquote className="reveal" data-delay="1">{CASE.quote}<cite>{CASE.handle}</cite></blockquote>
                 <div className="case-strip reveal" data-delay="2">
-                  {CASE.strip.map((s) => <div key={s.l}><span className="v">{s.v}</span><span className="l">{s.l}</span></div>)}
+                  {CASE.strip.map((s) => <div key={s.l}><span className="v" data-l={s.l}>{s.v}</span><span className="l">{s.l}</span></div>)}
                 </div>
                 <p className="caption" style={{ marginTop: 18 }}>{CASE.attr}{!FIGURES_VERIFIED ? " Placeholder until the consented export is supplied." : ""}</p>
               </div>

@@ -28,13 +28,13 @@ export const CASE = {
     { v: "4", l: "platforms run from one operation" },
     { v: "0", l: "days the page went unattended" },
   ],
-  attr: "Figures from the creator's own platform exports, January to December 2025, published with written consent.",
+  attr: "Creator's platform exports, January to December 2025, published with consent.",
 };
 
 export const IMPACT: Figure[] = [
-  { value: "$4.2M", label: "net revenue produced for the roster in 2025", attr: "Sum of platform exports, January to December 2025" },
+  { value: "$4.2M", label: "net revenue for the roster, 2025", attr: "Sum of platform exports, January to December 2025" },
   { value: "14", label: "creators on the roster, by design", attr: "As of September 2026" },
-  { value: "93%", label: "of creators still with us after twelve months", attr: "Creators onboarded 2024 to 2025, measured September 2026" },
+  { value: "93%", label: "of creators still here after twelve months", attr: "Creators onboarded 2024 to 2025, measured September 2026" },
 ];
 
 export const CASE_STUDIES: (Figure & { title: string })[] = [

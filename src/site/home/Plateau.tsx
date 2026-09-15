@@ -11,14 +11,11 @@ export default function Plateau() {
   return (
     <CausticSweep className="sec" id="plateau">
       <div className="wrap">
-        <div className="split">
-          <div className="sec-head reveal" style={{ marginBottom: 0 }}>
-            <span className="eyebrow">Diagnosis</span>
-            <h2 className="h-sec">Why most pages <em>plateau.</em></h2>
-          </div>
-          <p className="sub reveal" data-delay="1" style={{ alignSelf: "end" }}>Not talent. Not the algorithm. The operation around the creator, or the lack of one.</p>
+        <div className="sec-head reveal">
+          <span className="eyebrow">Diagnosis</span>
+          <h2 className="h-sec">Why most pages <em>plateau.</em></h2>
         </div>
-        <div className="diag-grid" style={{ marginTop: 44 }}>
+        <div className="diag-grid">
           {CARDS.map((c, i) => (
             <article className="glass glass--hover diag reveal" data-delay={i + 1} key={c.k}>
               <span className="k">{c.k}</span>

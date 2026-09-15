@@ -16,7 +16,7 @@ export default function Impact() {
             </div>
           ))}
         </div>
-        <p className="impact-note reveal">Every number on this site is dated and attributed to a platform export.{!FIGURES_VERIFIED ? " These three are placeholders until Halevora's own exports replace them." : ""}</p>
+        <p className="impact-note reveal">Every figure is dated and attributed to a platform export.{!FIGURES_VERIFIED ? " Placeholders pending verified exports." : ""}</p>
       </div>
     </section>
   );

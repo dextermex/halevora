@@ -33,7 +33,8 @@ export default function ShardText({ text, as: Tag = "span", className, style, de
   const chars = useMemo(() => Array.from(text), [text]);
 
   return (
-    <Tag ref={ref} className={`shard-text ${className || ""}`} style={style} aria-label={text} role="text">
+    <Tag ref={ref} className={`shard-text ${className || ""}`} style={style}>
+      <span className="sr-only">{text}</span>
       {chars.map((ch, i) => (
         <span className="ch" key={i} aria-hidden="true">
           <span className="base">{ch === " " ? " " : ch}</span>

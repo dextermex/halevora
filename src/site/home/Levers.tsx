@@ -20,13 +20,12 @@ export default function Levers() {
               <span className="k">{l.title}</span>
               <ShardText text={l.value} as="p" className="fig" reach={40} />
               <h3>{l.label}</h3>
-              <p>{l.line}</p>
               <div className="chart"><MiniChart series={l.series} series2={l.series2} label={`${l.title}: ${l.value} ${l.label}`} /></div>
               <span className="attr">{l.attr}</span>
             </article>
           ))}
         </DragRail>
-        {!FIGURES_VERIFIED ? <p className="figure-note" style={{ marginTop: 18 }}>Lever figures are placeholders until Halevora's verified exports replace them.</p> : null}
+        {!FIGURES_VERIFIED ? <p className="figure-note" style={{ marginTop: 18 }}>Placeholder figures pending verified exports.</p> : null}
       </div>
     </CausticSweep>
   );

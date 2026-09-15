@@ -54,7 +54,7 @@ export default function Hero() {
           <Link to={APPLY_PATH} className="btn btn--primary btn--lg">{CTA_LABEL} <ArrowRight className="arr" width={18} height={18} /></Link>
           <a href="#operation" className="btn btn--ghost btn--lg">See the operation</a>
         </motion.div>
-        <motion.p className="hero-note" {...rise(1.8)}>By application only · Influence, engineered</motion.p>
+        <motion.p className="hero-note" {...rise(1.8)}>By application only</motion.p>
       </div>
     </section>
   );

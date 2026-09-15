@@ -39,11 +39,12 @@
   "id": "og",
   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3EYoR3nfh8U5VPZYJrr1tA5ichC/hf_20260915_065239_aa894ec7-feb8-4a4b-94cd-d3b3240267e9.png",
   "preview": false,
-  "out": "public/og.png",
+  "out": "public/og.jpg",
   "cover": [
    1200,
    630
-  ]
+  ],
+  "quality": 84
  },
  {
   "id": "bird-flight",

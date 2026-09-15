@@ -23,9 +23,6 @@ export default function FaqSection() {
               <p style={{ marginTop: 22 }}><Link to="/faq" className="textlink">Every question, answered <ArrowRight className="arr" width={16} height={16} /></Link></p>
             </div>
           </div>
-          <div className="sticky reveal" data-delay="1">
-            <p className="sub">Seven here. Fourteen on the full page. If yours is not there, ask it in the application and it gets a straight answer.</p>
-          </div>
         </div>
       </div>
     </section>

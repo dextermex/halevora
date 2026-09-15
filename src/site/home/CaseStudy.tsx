@@ -26,10 +26,10 @@ export default function CaseStudy() {
             </blockquote>
             <div className="case-strip reveal" data-delay="2">
               {CASE.strip.map((s) => (
-                <div key={s.l}><span className="v">{s.v}</span><span className="l">{s.l}</span></div>
+                <div key={s.l}><span className="v" data-l={s.l}>{s.v}</span><span className="l">{s.l}</span></div>
               ))}
             </div>
-            <p className="caption" style={{ marginTop: 18 }}>{CASE.attr}{!FIGURES_VERIFIED ? " Placeholder until the consented export is supplied." : ""}</p>
+            <p className="caption" style={{ marginTop: 18 }}>{CASE.attr}{!FIGURES_VERIFIED ? " Placeholder pending consent." : ""}</p>
             <p style={{ marginTop: 22 }}><Link to="/case-studies" className="textlink">All results <ArrowRight className="arr" width={16} height={16} /></Link></p>
           </div>
         </div>

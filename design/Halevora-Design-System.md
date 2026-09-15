@@ -32,7 +32,7 @@ no butterfly, no AXRA headline.
 | `--surface-2` | #1A1626 | Form, phone, hover |
 | `--text` | #F4F1FA | Headlines, body |
 | `--muted` | #A69FB8 | Secondary text |
-| `--muted-low` | #7D7590 | Captions (4.6:1 on ground, captions only) |
+| `--muted-low` | #7D7590 | Captions on the page ground (4.6:1). Inside `.glass` the material lifts it to #8A829C (4.9:1 on the fill) |
 | `--primary` | #8A31E0 | Fills, buttons, chart series, large display only (3.4:1 on ground) |
 | `--primary-light` | #B87CF0 | All accent text, links, small type (6.8:1 on ground, 6.0:1 on surface-2) |
 | `--glacier` | #C9E4F5 | Glass edge highlights, caustics, second chart series |

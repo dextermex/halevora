@@ -23,9 +23,6 @@ export default function Premise() {
             </motion.p>
           ))}
         </div>
-        <motion.p className="premise-note" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 1, delay: 1 }}>
-          Like the glass: it can break into a hundred pieces on the way in, and it always comes back whole.
-        </motion.p>
       </div>
     </section>
   );

@@ -59,7 +59,7 @@ const ORG = {
   alternateName: ["Halevora", "Halevora and Co"],
   url: ORIGIN,
   logo: { "@type": "ImageObject", url: `${ORIGIN}/favicon.png`, width: 192, height: 192 },
-  image: `${ORIGIN}/og.png`,
+  image: `${ORIGIN}/og.jpg`,
   description: "Selective creator management company for adult creators on OnlyFans, Fanvue, Fansly and Telegram. Fewer creators, a deeper operation on each one: traffic, conversation, production and control, run in-house.",
   slogan: "Influence, engineered.",
   email: "support@halevora.com",
@@ -139,7 +139,7 @@ for (const p of posts) {
     article: { date: iso, tags: p.tags },
     body: html,
     ld: [
-      { "@context": "https://schema.org", "@type": "BlogPosting", "@id": `${ORIGIN}${path}#article`, headline: p.title, description: p.seoDesc || p.dek, image: [`${ORIGIN}/og.png`], datePublished: iso, dateModified: iso, author: { "@type": "Organization", "@id": ORG_ID, name: "Halevora & Co", url: ORIGIN }, publisher: { "@id": ORG_ID }, mainEntityOfPage: { "@type": "WebPage", "@id": `${ORIGIN}${path}` }, isPartOf: { "@id": `${ORIGIN}/blog#blog` }, keywords: p.tags, articleSection: p.tags[0], inLanguage: "en", wordCount: p.body.split(/\s+/).filter(Boolean).length },
+      { "@context": "https://schema.org", "@type": "BlogPosting", "@id": `${ORIGIN}${path}#article`, headline: p.title, description: p.seoDesc || p.dek, image: [`${ORIGIN}/og.jpg`], datePublished: iso, dateModified: iso, author: { "@type": "Organization", "@id": ORG_ID, name: "Halevora & Co", url: ORIGIN }, publisher: { "@id": ORG_ID }, mainEntityOfPage: { "@type": "WebPage", "@id": `${ORIGIN}${path}` }, isPartOf: { "@id": `${ORIGIN}/blog#blog` }, keywords: p.tags, articleSection: p.tags[0], inLanguage: "en", wordCount: p.body.split(/\s+/).filter(Boolean).length },
       crumbs([["Home", "/"], ["Notes", "/blog"], [p.title, path]]),
     ],
   });
