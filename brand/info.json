@@ -146,9 +146,9 @@
   "width": 96
  },
  "og": {
-  "bytes": 962460,
+  "bytes": 82250,
   "height": 630,
-  "out": "public/og.png",
+  "out": "public/og.jpg",
   "width": 1200
  },
  "shatter-ref": {
