@@ -1,27 +1,20 @@
-import { motion } from "motion/react";
-import { EASE_GLASS } from "@/site/motion/ease";
+import { useRef } from "react";
+import ScrollWords from "@/site/motion/ScrollWords";
+import { useScrollProgress } from "@/site/hooks";
 
-const LINES = [
-  { t: "Most agencies add hands.", cls: "dim" },
-  { t: "We build the operation around you.", cls: "" },
-  { t: "Nothing is left to chance. Everything reassembles exactly as intended.", cls: "it" },
-];
+const TEXT = "You have heard of the loud agencies. You have not heard of us. *That is deliberate.* A roster this small is not something you advertise. It is something the creators on it *keep to themselves.*";
 
-/** Three serif lines, one italic. The shatter-and-reform idea stated once. */
+/** The premise, pinned: the statement reads itself in word by word as the
+ * section scrolls, then holds while the bird crosses. */
 export default function Premise() {
+  const ref = useRef<HTMLElement>(null);
+  const scrollYProgress = useScrollProgress(ref, ["start 70%", "end 100%"]);
   return (
-    <section className="premise" id="management" aria-label="The premise">
-      <div className="wrap">
-        <div className="premise-lines">
-          {LINES.map((l, i) => (
-            <motion.p key={i} className={`line ${l.cls}`}
-              initial={{ opacity: 0, y: 22, filter: "blur(4px)" }}
-              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              viewport={{ once: true, amount: 0.6 }}
-              transition={{ duration: 1.3, ease: EASE_GLASS, delay: i * 0.28 }}>
-              {l.t}
-            </motion.p>
-          ))}
+    <section className="premise" id="management" aria-label="The premise" ref={ref}>
+      <div className="premise-stage">
+        <div className="wrap">
+          <span className="eyebrow premise-eyebrow">Why you have not heard of us</span>
+          <ScrollWords text={TEXT} as="p" className="premise-text" progress={scrollYProgress} />
         </div>
       </div>
     </section>

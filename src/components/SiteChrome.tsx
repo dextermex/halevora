@@ -1,4 +1,5 @@
 import { useEffect, useState, type ReactNode } from "react";
+import { motion, useScroll, useSpring } from "motion/react";
 import { Link, useLocation } from "react-router-dom";
 import hMono from "@/assets/brand/h-glass-96.webp";
 import hMonoLg from "@/assets/brand/h-glass-cut.webp";
@@ -10,7 +11,8 @@ import { APPLY_PATH, CONTACT_EMAIL, CTA_LABEL, ENTITY_LINE } from "@/site/contac
  * other page links back to the home anchors.
  */
 const NAV: [string, string][] = [
-  ["Management", "#management"],
+  ["The engine", "#engine"],
+  ["The chat floor", "#chat"],
   ["The operation", "#operation"],
   ["Results", "#results"],
 ];
@@ -27,6 +29,8 @@ export default function SiteChrome({ home = false, children }: { home?: boolean;
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
+  const { scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30, mass: 0.4 });
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -46,6 +50,7 @@ export default function SiteChrome({ home = false, children }: { home?: boolean;
           <span className="dot" aria-hidden="true" />
           <span>Now accepting applications for <b>2027</b></span>
         </div>
+        <motion.span className="nav-progress" aria-hidden="true" style={{ scaleX: progress }} />
         <div className="wrap nav-inner">
           <Link to="/" className="brand" aria-label="Halevora & Co, home">
             <img src={hMono} alt="" className="brand-mark" width={30} height={30} />
@@ -75,10 +80,10 @@ export default function SiteChrome({ home = false, children }: { home?: boolean;
             <div className="foot-brand">
               <img src={hMonoLg} alt="The Halevora glass H monogram" className="foot-mono" width={96} height={91} loading="lazy" />
               <Link to="/" className="brand" aria-label="Halevora & Co"><Wordmark /></Link>
-              <p>Selective creator management. Influence, engineered.</p>
+              <p>The agency nobody tells you about. Selective creator management. Influence, engineered.</p>
               <span className="age-badge"><b>18+</b> Adults only. Every creator we work with is 18 or older.</span>
             </div>
-            <div className="foot-col"><h5>Agency</h5><a href={anchor("#management")}>Management</a><a href={anchor("#operation")}>The operation</a><a href={anchor("#results")}>Results</a><Link to="/case-studies">Case studies</Link><a href={anchor("#ninety")}>The first 90 days</a></div>
+            <div className="foot-col"><h5>Agency</h5><a href={anchor("#engine")}>The engine</a><a href={anchor("#chat")}>The chat floor</a><a href={anchor("#operation")}>The operation</a><a href={anchor("#results")}>Results</a><Link to="/case-studies">Case studies</Link><a href={anchor("#ninety")}>The first 90 days</a></div>
             <div className="foot-col"><h5>Company</h5><Link to={APPLY_PATH}>Apply</Link><Link to="/faq">FAQ</Link><Link to="/blog">Blog</Link><a href={`mailto:${CONTACT_EMAIL}`}>Contact</a></div>
             <div className="foot-col"><h5>Legal</h5><Link to="/privacy">Privacy notice</Link><Link to="/applicant-privacy">Applicant privacy</Link></div>
           </div>

@@ -31,6 +31,11 @@ export const CASE = {
   attr: "Creator's platform exports, January to December 2025, published with consent.",
 };
 
+export const WINS: (Figure & { title: string; line: string })[] = [
+  { title: "Creator A · on the roster since 2025", line: "Started from a standing start. Eighteen months later she runs the screen.", value: "$0 to $38K", label: "monthly net inside six months, one platform", attr: "Platform export, months one to six, 2025" },
+  { title: "Creator B · on the roster since 2024", line: "A second platform, run from the same operation, without a second team.", value: "+$19K", label: "monthly net added on Fanvue inside a quarter", attr: "Platform export, Q2 2026" },
+];
+
 export const IMPACT: Figure[] = [
   { value: "$4.2M", label: "net revenue for the roster, 2025", attr: "Sum of platform exports, January to December 2025" },
   { value: "14", label: "creators on the roster, by design", attr: "As of September 2026" },

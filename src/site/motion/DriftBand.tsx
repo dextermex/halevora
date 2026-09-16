@@ -9,11 +9,11 @@ const BASE_SPEED = 26;
  * and resumes on leave, driven by a critically damped spring so speed never
  * steps. Three copies of the set make the loop seamless.
  */
-export default function DriftBand({ children, label }: { children: ReactNode; label: string }) {
+export default function DriftBand({ children, label, speed: cruise = BASE_SPEED }: { children: ReactNode; label: string; speed?: number }) {
   const reduce = useReducedMotion();
   const setRef = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
-  const speed = useSpring(BASE_SPEED, { stiffness: 40, damping: 26 });
+  const speed = useSpring(cruise, { stiffness: 40, damping: 26 });
 
   useAnimationFrame((_, delta) => {
     if (reduce) return;
@@ -25,7 +25,7 @@ export default function DriftBand({ children, label }: { children: ReactNode; la
   });
 
   return (
-    <div className="drift" aria-label={label} onPointerEnter={() => speed.set(0)} onPointerLeave={() => speed.set(BASE_SPEED)}>
+    <div className="drift" aria-label={label} onPointerEnter={() => speed.set(0)} onPointerLeave={() => speed.set(cruise)}>
       <motion.div className="drift-track" style={{ x }}>
         {Array.from({ length: 3 }).map((_, rep) => (
           <div className="drift-set" key={rep} ref={rep === 0 ? setRef : undefined} aria-hidden={rep > 0 || undefined}>

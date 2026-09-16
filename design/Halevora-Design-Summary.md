@@ -101,27 +101,39 @@ crosses every glass surface as its section scrolls, driven by one CSS variable p
 MP4 not WebGL; poster first and film attached after load; paused off screen; the film
 band attaches only when near the viewport.
 
-## 8. Home page, in order
+## 8. Home page, in order (September 2026 rebuild)
 
-1. Announcement bar: Now accepting applications for 2027
-2. Nav: Management, The operation, Results, Apply, FAQ, Blog, Apply for 2027
-3. Hero: glass bird film, wordmark assembling from shards, primary CTA
-4. The premise: three serif lines, one italic
-5. Platform drift band: OnlyFans, Fanvue, Fansly, Telegram
-6. Why most pages plateau: two diagnosis cards
-7. The operation: four roles on a rail
+Positioning: the agency nobody tells you about, the one creators gatekeep. The chat
+floor is the stated edge. The bird flies through the page as a fixed layer.
+
+1. Announcement bar and nav (The engine, The chat floor, The operation, Results), with
+   a glacier scroll-progress line under the nav
+2. Hero: the shatter-and-reform film with a pointer lean, "The agency nobody *tells you
+   about*", word-by-word blur entrance, two CTAs, mono strip, vertical wordmark, cue
+3. Ticker: six serif lines, glacier shards between
+4. The premise, pinned: the statement reads itself in word by word on scroll; the bird
+   enters from the right and banks across it
+5. The content engine, pinned: twelve platform chips drop from above the viewport into
+   a glass chamber in sequence, the core lights, three outputs read off the bottom; the
+   bird hovers over the intake
+6. The chat floor, pinned: a glass phone fills with a late-night conversation message
+   by message as you scroll, typing beat included, beside the 71% figure
+7. The operation, pinned horizontal: four role cards and the "You create" card slide
+   past as you scroll; the bird crosses left to right
 8. Full-bleed film band
-9. Revenue levers: four, figures from shards
-10. The first ninety days: three phases
-11. Named case study
-12. Impact: three figures
-13. In plain terms: six guarantees
-14. Alone, or engineered: comparison
+9. Revenue levers: four glass cards, figures from shards, mini charts
+10. The wins: two anonymised roster cards and three roster figures
+11. Your first ninety days: three phases along a glacier line that draws on scroll
+12. In plain terms: six glass guarantees
+13. Alone, or engineered: comparison
+14. The close: "You were not supposed to find us. *Now that you have.*" over the arc
+    still, parallaxed; the bird settles above it
 15. Apply: two-step form, private intake, 18+, privacy line
 16. Seven questions
 17. Footer: 18+ badge, entity line, glass H
 
-Shard dividers sit after the diagnosis, the levers, the case study and the comparison.
+Shard dividers sit after the engine, the levers and the terms. A pointer spotlight in
+glacier follows the cursor on fine-pointer devices.
 
 ## 9. Measured against the definition of done
 

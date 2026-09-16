@@ -11,7 +11,7 @@ violet glass palette and a high-contrast serif.
 
 | Path | Page |
 | --- | --- |
-| `/` | Home (`src/pages/Home.tsx`), 17 blocks in the order fixed by the brief |
+| `/` | Home (`src/pages/Home.tsx`): hero, ticker, premise, content engine, chat floor, operation rail, film, levers, wins, ninety days, terms, comparison, close, apply, questions |
 | `/apply` | Two-step application, private intake (`src/site/ApplyForm.tsx`) |
 | `/case-studies` | The named study and roster figures |
 | `/faq` | All questions (single source: `src/site/faqData.ts`) |
@@ -31,8 +31,19 @@ npm run lint
 
 `design/Halevora-Design-System.md` is the source of truth; `src/styles/site.css`
 implements it (tokens, glass material, type, buttons, forms, chrome). Motion
-primitives live in `src/site/motion` (shard text, shard divider, caustic sweep, drag
-rail, drift band, mini chart), home sections in `src/site/home`.
+primitives live in `src/site/motion` (bird flight, spotlight, scroll words, shard
+text, shard divider, caustic sweep, drag rail, drift band, mini chart), home sections
+in `src/site/home`.
+
+The home page is built around four pinned, scroll-scrubbed scenes (the premise, the
+content engine, the chat floor, the operation rail) and one fixed layer, the glass
+bird, which flies a route defined against those sections (`BirdFlight.tsx`). Every
+scroll-linked value goes through `useScrollProgress` in `src/site/hooks.ts`: Motion
+12.43 marks `useScroll` progress for ScrollTimeline acceleration, and range-based
+transforms driven that way drop back to their mount values once a section has
+scrolled past, so the hook routes progress through a function transform to keep it on
+the main thread. Under `prefers-reduced-motion` every scene renders its settled state
+and the bird is not rendered.
 
 ## Figures
 

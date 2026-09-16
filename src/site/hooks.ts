@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type RefObject } from "react";
+import { useScroll, useTransform, type MotionValue } from "motion/react";
 import SEO from "./seo.json";
 
 /** Adds `.in` to every `.reveal` element as it enters the viewport. */
@@ -60,4 +61,16 @@ export function useSeo(title: string, description?: string) {
 export function useRouteSeo(path: keyof typeof SEO) {
   const m = SEO[path];
   useSeo(m.title, m.desc);
+}
+
+/**
+ * Scroll progress of a target as a plain motion value. useScroll marks its
+ * progress values for hardware acceleration (ScrollTimeline), which hands
+ * range-based transforms to the compositor; past the end of the range those
+ * animations drop back to their mount-time values. Routing the value through
+ * a function transform keeps it on the main thread and always current.
+ */
+export function useScrollProgress(target: RefObject<HTMLElement>, offset: [string, string]): MotionValue<number> {
+  const { scrollYProgress } = useScroll({ target, offset: offset as never });
+  return useTransform(scrollYProgress, (v) => v);
 }
